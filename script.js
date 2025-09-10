@@ -33,7 +33,7 @@ function addMaterial(material, artNr, link, menge) {
   a.href = link;
   a.textContent = artNr;
   a.target = "_blank";
-  a.className = "w3-button w3-small w3-round w3-teal";
+  a.className = "w3-button w3-small w3-round m3ta-theme";
   a.style.fontWeight = "bold";
   a.style.width = "100%";
   tdLink.appendChild(a);
@@ -69,7 +69,7 @@ function generateMaterialList() {
   const butterflys = A > 1600 ? 3 : 2; // große Cases → 3, sonst 2
   const scharniere = A > 1600 ? 3 : 2; // große Cases → 3, sonst 2
   const griffe = A > 1000 ? 8 : 4; // große Cases → 8, sonst 4
-  const kantenschutz = 4;
+  const lecke = 4;
   const swinkel = 4;
   const wheels = 1;
 
@@ -81,7 +81,7 @@ function generateMaterialList() {
   addMaterial("Butterfly-Verschlüsse", "172511", "https://www.aweo.de/Adam-Hall-172511-V3-Automatik-Butterfly-Verschluss-gross-gekroepft-14-mm-tief", butterflys + "x");
   addMaterial("Scharniere", "270755", "https://www.aweo.de/Adam-Hall-270755-Deckelfeststeller-gekroepft-mit-Scharnier-Klick-Stop-Funktion-und-Nietschutz", scharniere + "x");
   addMaterial("Klappgriffe", "34087", "https://www.aweo.de/Adam-Hall-34087-Klappgriff-gross-gefedert-in-Einbauschale-95-mm-tief-mit-Nietschutz", griffe + "x");
-  addMaterial("Kantenschutz", "34087", "https://www.aweo.de/Adam-Hall-40404-L-Ecke-60-x-50-mm-gekroepft-fuer-AH6110-Kantenschutz", kantenschutz + "x");
-  addMaterial("Schliesswinkel", "34087", "https://www.aweo.de/Adam-Hall-40407-L-Ecke-30-x-24-mm-verzinkt", swinkel + "x");
-  addMaterial("Wheelset", "34087", "https://www.aweo.de/4er-set-lenkrollen-80mm-blue-wheel-2-gebremst", wheels + " Set");
+  addMaterial("L-Ecke", "4054", "https://www.aweo.de/Adam-Hall-4054-L-Ecke-47-x-52-mm-gekroepft", lecke + "x");
+  addMaterial("Schliesswinkel", "40407", "https://www.aweo.de/Adam-Hall-40407-L-Ecke-30-x-24-mm-verzinkt", swinkel + "x");
+  addMaterial("Wheelset", "wheels", "https://www.aweo.de/4er-set-lenkrollen-80mm-blue-wheel-2-gebremst", wheels + " Set");
 } 

@@ -1,104 +1,97 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FCMCalc</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-  <link rel="stylesheet" href="stylev5.css">
-  <link rel="stylesheet" href="stylev4.css">
-  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
-
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FCMCalc</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="stylev5.css">
+    <link rel="stylesheet" href="stylev4.css">
+    <link rel="stylesheet" href="m3ta_theme.css">
     <style>
-        /* Mobile Optimierungen */
-        @media (max-width: 1399px) {
-            .mobile-optimized {
-                font-size: 14px;
-            }
-            .w3-button {
-                padding: 8px 12px;
-                margin: 2px 0;
-            }
-            .w3-table td, .w3-table th {
-                padding: 8px;
-            }
-            .hide-on-mobile {
-                display: none !important;
-            }
-        }
-        
-        /* Desktop Optimierungen */
-        @media (min-width: 1400px) {
-            .desktop-optimized {
-                font-size: 24px;
-            }
-            .w3-button {
-                padding: 10px 16px;
-                margin: 0 5px;
-            }
-            .hide-on-desktop {
-                display: none !important;
-            }
-            .body {
-              width: 50vw !important;
-            }
-        }
+    /* Mobile Optimierungen */
+    @media (max-width: 1399px) {
+    .mobile-optimized {
+    font-size: 14px;
+    }
+    .w3-button {
+    padding: 8px 12px;
+    margin: 2px 0;
+    }
+    .w3-table td, .w3-table th {
+    padding: 8px;
+    }
+    .hide-on-mobile {
+    display: none !important;
+    }
+    }
+    
+    /* Desktop Optimierungen */
+    @media (min-width: 1400px) {
+    .desktop-optimized {
+    font-size: 24px;
+    }
+    .w3-button {
+    padding: 10px 16px;
+    margin: 0 5px;
+    }
+    .hide-on-desktop {
+    display: none !important;
+    }
+    .body {
+    width: 50vw !important;
+    }
+    }
     </style>
-
-</head>
-<body>
-  <div style="device-width">
-  <div class="w3-container w3-asphalt">
-  <h4>Länge (A) cm</h4>
-  <div class="row" data-field="A">
-    <button class="w3-button w3-round w3-teal w3-margin-bottom" style="width:17vw; font-weight: bold; font-size: 18px;">60</button>
-    <button class="w3-button w3-round w3-teal w3-margin-bottom" style="width:17vw; font-weight: bold; font-size: 18px;">80</button>
-    <button class="w3-button w3-round w3-teal w3-margin-bottom" style="width:17vw; font-weight: bold; font-size: 18px;">90</button>
-    <button class="w3-button w3-round w3-teal w3-margin-bottom" style="width:17vw; font-weight: bold; font-size: 18px;">120</button>
-    <button class="w3-button w3-round w3-teal w3-margin-bottom" style="width:17vw; font-weight: bold; font-size: 18px;">140</button>
-    <button class="w3-button w3-round w3-teal" style="width:17vw; font-weight: bold; font-size: 18px;">150</button>
-    <button class="w3-button w3-round w3-teal" style="width:17vw; font-weight: bold; font-size: 18px;">160</button>
-    <button class="w3-button w3-round w3-teal" style="width:17vw; font-weight: bold; font-size: 18px;">180</button>
-    <button class="w3-button w3-round w3-teal" style="width:17vw; font-weight: bold; font-size: 18px;">200</button>
-  </div>
-
-  <h4>Höhe (B) cm</h4>
-  <div class="row" data-field="B">
-    <button class="w3-button w3-round w3-teal" style="width:17vw; font-weight: bold; font-size: 18px;">60</button>
-    <button class="w3-button w3-round w3-teal" style="width:17vw; font-weight: bold; font-size: 18px;">75</button>
-  </div>
-
-  <h4>Breite (C) cm</h4>
-  <div class="row" data-field="C">
-    <button class="w3-button w3-round w3-teal" style="width:17vw; font-weight: bold; font-size: 18px;">60</button>
-    <button class="w3-button w3-round w3-teal" style="width:17vw; font-weight: bold; font-size: 18px;">80</button>
-  </div>
-
-  <div class="output">
-    <p id="outA">A:</p>
-    <p id="outB">B:</p>
-    <p id="outC">C:</p>
-  </div>
-  </div>
-  <div class="w3-container w3-teal">
-  <h4>Materialliste</h4>
-  </div>
-<table class="w3-table w3-striped" id="materialTable">
-  <thead>
-    <tr>
-      <th>Material</th>
-      <th>ArtNr/Link</th>
-      <th>Menge</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- Zeilen werden per JavaScript eingefügt -->
-  </tbody>
-</table>
-<div>
-  <p>made with <3 by m3ta</p>
-</div>
-  
-  <script src="script.js"></script>
-</body>
-</html>
+  </head>
+  <body>
+    <div style="device-width">
+      <div class="w3-container w3-asphalt">
+        <h4>Länge (A) cm</h4>
+        <div class="row" data-field="A">
+          <button class="w3-button w3-round m3ta-theme w3-margin-bottom" style="width:17vw; font-weight: bold; font-size: 18px;">60</button>
+          <button class="w3-button w3-round m3ta-theme w3-margin-bottom" style="width:17vw; font-weight: bold; font-size: 18px;">80</button>
+          <button class="w3-button w3-round m3ta-theme w3-margin-bottom" style="width:17vw; font-weight: bold; font-size: 18px;">90</button>
+          <button class="w3-button w3-round m3ta-theme w3-margin-bottom" style="width:17vw; font-weight: bold; font-size: 18px;">100</button>
+          <button class="w3-button w3-round m3ta-theme w3-margin-bottom" style="width:17vw; font-weight: bold; font-size: 18px;">120</button>
+          <button class="w3-button w3-round m3ta-theme" style="width:17vw; font-weight: bold; font-size: 18px;">140</button>
+          <button class="w3-button w3-round m3ta-theme" style="width:17vw; font-weight: bold; font-size: 18px;">150</button>
+          <button class="w3-button w3-round m3ta-theme" style="width:17vw; font-weight: bold; font-size: 18px;">160</button>
+          <button class="w3-button w3-round m3ta-theme" style="width:17vw; font-weight: bold; font-size: 18px;">180</button>
+          <button class="w3-button w3-round m3ta-theme" style="width:17vw; font-weight: bold; font-size: 18px;">200</button>
+        </div>
+        <h4>Höhe (B) cm</h4>
+        <div class="row" data-field="B">
+          <button class="w3-button w3-round m3ta-theme" style="width:17vw; font-weight: bold; font-size: 18px;">60</button>
+          <button class="w3-button w3-round m3ta-theme" style="width:17vw; font-weight: bold; font-size: 18px;">75</button>
+        </div>
+        <h4>Breite (C) cm</h4>
+        <div class="row" data-field="C">
+          <button class="w3-button w3-round m3ta-theme" style="width:17vw; font-weight: bold; font-size: 18px;">60</button>
+          <button class="w3-button w3-round m3ta-theme" style="width:17vw; font-weight: bold; font-size: 18px;">80</button>
+        </div>
+        <div class="output">
+          <p id="outA">A:</p>
+          <p id="outB">B:</p>
+          <p id="outC">C:</p>
+        </div>
+      </div>
+      <div class="w3-container m3ta-theme">
+        <h4>Materialliste</h4>
+      </div>
+      <div class="w3-container w3-margin-bottom">
+        <table class="w3-table w3-striped" id="materialTable">
+          <thead>
+            <tr>
+              <th>Material</th>
+              <th>ArtNr/Link</th>
+              <th>Menge</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+      <script src="script.js"></script>
+    </body>
+  </html>
