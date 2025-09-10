@@ -2,66 +2,99 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FCMCalc</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stylev5.css">
+  <link rel="stylesheet" href="stylev4.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+
+    <style>
+        /* Mobile Optimierungen */
+        @media (max-width: 1399px) {
+            .mobile-optimized {
+                font-size: 14px;
+            }
+            .w3-button {
+                padding: 8px 12px;
+                margin: 2px 0;
+            }
+            .w3-table td, .w3-table th {
+                padding: 8px;
+            }
+            .hide-on-mobile {
+                display: none !important;
+            }
+        }
+        
+        /* Desktop Optimierungen */
+        @media (min-width: 1400px) {
+            .desktop-optimized {
+                font-size: 16px;
+            }
+            .w3-button {
+                padding: 10px 16px;
+                margin: 0 5px;
+            }
+            .hide-on-desktop {
+                display: none !important;
+            }
+            .body {
+              width: 50vw !important;
+            }
+        }
+    </style>
+
 </head>
 <body>
-  <h2>Länge (A) mm</h2>
+  <div style="device-width">
+  <div class="w3-container w3-asphalt">
+  <h4>Länge (A) cm</h4>
   <div class="row" data-field="A">
-    <button>600</button>
-    <button>800</button>
-    <button>900</button>
-    <button>1200</button>
-    <button>1400</button>
-    <button>1500</button>
-    <button>1600</button>
-    <button>1800</button>
-    <button>2000</button>
+    <button class="w3-button w3-small w3-round w3-teal w3-margin-bottom" style="width:17vw; font-weight: bold;">60</button>
+    <button class="w3-button w3-small w3-round w3-teal w3-margin-bottom" style="width:17vw; font-weight: bold;">80</button>
+    <button class="w3-button w3-small w3-round w3-teal w3-margin-bottom" style="width:17vw; font-weight: bold;">90</button>
+    <button class="w3-button w3-small w3-round w3-teal w3-margin-bottom" style="width:17vw; font-weight: bold;">120</button>
+    <button class="w3-button w3-small w3-round w3-teal w3-margin-bottom" style="width:17vw; font-weight: bold;">140</button>
+    <button class="w3-button w3-small w3-round w3-teal" style="width:17vw; font-weight: bold;">150</button>
+    <button class="w3-button w3-small w3-round w3-teal" style="width:17vw; font-weight: bold;">160</button>
+    <button class="w3-button w3-small w3-round w3-teal" style="width:17vw; font-weight: bold;">180</button>
+    <button class="w3-button w3-small w3-round w3-teal" style="width:17vw; font-weight: bold;">200</button>
   </div>
 
-  <h2>Höhe (B) mm</h2>
+  <h4>Höhe (B) cm</h4>
   <div class="row" data-field="B">
-    <button>600</button>
-    <button>750</button>
+    <button class="w3-button w3-small w3-round w3-teal" style="width:17vw; font-weight: bold;">60</button>
+    <button class="w3-button w3-small w3-round w3-teal" style="width:17vw; font-weight: bold;">75</button>
   </div>
 
-  <h2>Breite (C) mm</h2>
+  <h4>Breite (C) cm</h4>
   <div class="row" data-field="C">
-    <button>600</button>
-    <button>800</button>
+    <button class="w3-button w3-small w3-round w3-teal" style="width:17vw; font-weight: bold;">60</button>
+    <button class="w3-button w3-small w3-round w3-teal" style="width:17vw; font-weight: bold;">80</button>
   </div>
 
   <div class="output">
-    <p id="outA">A: -</p>
-    <p id="outB">B: -</p>
-    <p id="outC">C: -</p>
+    <p id="outA">A:</p>
+    <p id="outB">B:</p>
+    <p id="outC">C:</p>
   </div>
-  
-  <h2>Materialliste</h2>
-  <table id="materialTable">
-    <thead>
-      <tr>
-        <th>Material</th>
-        <th>ArtNr</th>
-        <th>Link</th>
-        <th>Länge/Menge</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Sperrholz 9mm</td>
-        <td>12345</td>
-        <td><a href="https://beispielshop.de/artikel/12345" target="_blank">Zum Shop</a></td>
-        <td>2,0 m²</td>
-      </tr>
-      <tr>
-        <td>Aluprofil 30x30</td>
-        <td>67890</td>
-        <td><a href="https://beispielshop.de/artikel/67890" target="_blank">Zum Shop</a></td>
-        <td>4 Stück à 1,2 m</td>
-      </tr>
-    </tbody>
-  </table>
+  </div>
+  <div class="w3-container w3-teal">
+  <h4>Materialliste</h4>
+  </div>
+<table class="w3-table w3-striped" id="materialTable">
+  <thead>
+    <tr>
+      <th>Material</th>
+      <th>ArtNr/Link</th>
+      <th>Menge</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Zeilen werden per JavaScript eingefügt -->
+  </tbody>
+</table>
+
   
   <script src="script.js"></script>
 </body>
